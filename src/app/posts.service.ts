@@ -13,7 +13,7 @@ export class PostsService {
   
     }
   
-  private baseURL = "https://tmorrow.dev/public";
+  private baseURL = "https://tmorrow.design";
   
   
   fetchPosts() {

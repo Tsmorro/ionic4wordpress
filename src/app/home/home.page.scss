@@ -3,8 +3,9 @@
 }
 
 .featured-image {
-    max-height: 100px;
-    max-width: 100px;
+    max-height: 400px;
+    max-width: 400px;
+    height:auto;
     margin-left: auto;
     margin-right: auto;
 }
@@ -19,6 +20,77 @@ h3{
 }
 :host {
     ion-item {
-        border-bottom: 2px dotted var(--ion-color-medium);
+        border-bottom: 1px solid var(--ion-color-medium);
     }
+}
+ion-card{
+    --background: var(--tylerscolor);
+    --color: var(--tylersfont);
+}
+ion-toolbar {
+    --background: var(--tylerscolor);
+    --color: var(--tylersfont);
+}
+ion-item{
+    --background: var(--tylerscolor);
+    --color: var(--tylersfont);
+}
+ion-button{
+    margin-right:20px; 
+}
+ion-card-title{
+    --background: var(--tylerscolor);
+    --color: var(--tylersfont);
+}
+ion-col{
+    display:inline-block;
+}
+ion-content.outercontent{
+    --background: var(--tylersback);
+}
+#headerhome{
+    color: var(--tylersfont);
+}
+
+#readmore{
+    text-align:center;
+    margin-right:30%;
+}
+img {
+    max-width: 100% !important;
+    border: 0;
+}
+
+.featured-image[_ngcontent-qtk-c0] {
+    /* max-height: 400px; */
+    max-width: 400px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+img.featured-image {
+    max-width: 75% !important;
+    max-height: 100% !important;
+    border: 0;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+button.button-native{
+    background: var(--tylersfont) !important;
+    color: var(--tylerscolor) !important;
+}
+ion-button#button1 {
+    border: 1px solid white;
+    background: white;
+    color: black;
+    border-radius: 80px;
+}
+ion-button#button2 {
+    border: 1px solid black;
+    background: black;
+    color: white;
+    border-radius: 80px;
+    display:none;
 }

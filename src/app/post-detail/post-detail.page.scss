@@ -12,11 +12,55 @@
 
 h1{
     margin-top: 300px;
+    color:var(--tylersfont);
 }
 
-div.elementor-section-wrap{
+ion-content{
     display: flex;
     justify-content:center;
-    flex-direction: column;
-    text-align:center;
+    flex-direction: row;
+    flex-wrap:wrap;
+    align-items:center;
+    color:var(--tylersfont) !important;
+}
+ion-content * {
+        max-width: 100%;
+        padding: 5px 5px;
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        color: var(--tylersfont);
+    }
+
+body > app-root > ion-app > ion-split-pane > ion-router-outlet > app-post-detail > ion-content > div > div > p:nth-child(2) > br:nth-child(4){
+    display:none;
+}
+.elementor-image {
+    /* max-width: 75%; */
+    height: auto;
+    /* display: grid; */
+    align-items: center;
+    justify-content: center;
+}
+.elementor-image:first-child{
+    width: 75%;
+    height: auto;
+}
+ion-title{
+    color:var(--tylersfont);
+}
+img.attachment-full.size-full {
+    max-width: 75%;
+    height: auto;
+}
+span.button-inner.sc-ion-back-button-md {
+    color: var(--tylersfont);
+}
+.elementor-image{
+    img.attachment-large.size-large {
+        height: auto !important;
+    }
 }

@@ -4,33 +4,23 @@
       <ion-back-button defaultHref="/"></ion-back-button>
     </ion-buttons>
       <ion-title>
-        Details
+        Case Study
       </ion-title>
     </ion-toolbar>
   </ion-header>
-  
+
+
 
 <ion-content padding>
-  <div  *ngIf="post$ | async as post">
-      <div *ngIf="post.featured_image">
-      <img class="featured_image" [src]="post.featured_image" alt="Featured Image">
-    </div>
-      
-      
-    <h1 [innerHTML]="post.title.rendered"> </h1>
-     
-    
+  <div *ngIf="post$ | async as post">
     <div class="content" [innerHTML]="sanitizer.bypassSecurityTrustHtml(post.content.rendered)"></div>
-    
-
   </div>
     
-    <button (click)="shareTwitter()"><ion-icon name="logo-twitter"></ion-icon></button>
+  <!--   <button (click)="shareTwitter()"><ion-icon name="logo-twitter"></ion-icon></button>
   <button (click)="shareEmail()"><ion-icon name="send"></ion-icon></button>
   <button (click)="shareFacebook()"><ion-icon name="logo-facebook"></ion-icon></button>
   <button (click)="shareWhatsApp()"><ion-icon name="logo-whatsapp"></ion-icon></button>
-  <button ion-button small round icon-left outline  mode="ios" color="shareBtn" (click)="shareWhatsApp()">
+  <button ion-button round icon-left outline  mode="ios" color="tylersfont" (click)="shareWhatsApp()">
               <ion-icon name="share"></ion-icon>
               <b>Share</b>
-          </button>
-</ion-content>
+              </button> -->

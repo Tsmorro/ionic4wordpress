@@ -14,11 +14,6 @@ export class AppComponent {
       title: 'Home',
       url: '/home',
       icon: 'home'
-    },
-    {
-      title: 'Categories',
-      url: '/categories',
-      icon: 'list'
     }
   ];
 
@@ -32,7 +27,7 @@ export class AppComponent {
 
   initializeApp() {
     this.platform.ready().then(() => {
-      this.statusBar.styleDefault();
+      this.statusBar.styleBlackTranslucent();
       this.splashScreen.hide();
     });
   }

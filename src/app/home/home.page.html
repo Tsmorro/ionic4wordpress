@@ -5,13 +5,17 @@
         </ion-buttons>
         <ion-title>
             Home
-        </ion-title>
+        </ion-title> 
+        <ion-buttons slot="end">
+            <ion-button ion-button id="button1" (click)="colorIt()">Light Theme</ion-button>
+            <ion-button ion-button id="button2" (click)="decolorIt()">Dark Theme</ion-button>
+        </ion-buttons>
     </ion-toolbar>
 </ion-header>
 
-<ion-content padding class="outer-content">
 
-    <!--  <div (click)="loadPost(post)" padding-bottom *ngFor="let post of posts$ | async">
+
+     <!--<div (click)="loadPost(post)" padding-bottom *ngFor="let post of posts$ | async">
         <div>
           <h3 [innerHTML]="post.title.rendered"> </h3>
           <p no-margin> <small> By {{post._embedded.author[0].name }} </small> </p>
@@ -26,9 +30,8 @@
 
 
 
-<!--    <ion-card button detail lines="inset" (click)="loadPost(post)" padding-bottom *ngFor="let post of posts$ | async" tappable>
 
-              <div *ngIf="post.featured_image">
+          <!--     <div *ngIf="post.featured_image">
             <img padding-top class="featured-image" [src]="post.featured_image">
         </div>
 
@@ -38,21 +41,100 @@
 
         <ion-card-content>
 
-            <ion-item>
-                <p no-margin> <small> Published by {{post._embedded.author[0].name }} on  {{post.date }} </small> </p>
-
-            </ion-item>
+           
 
 
             <div [innerHTML]="post.excerpt.rendered">
 
             </div>
+            <ion-item>
+                <p no-margin> <small> Published by {{post._embedded.author[0].name }} on  {{post.date }} </small> </p>
 
+            </ion-item>
+       -->
+       <ion-content padding class="outercontent">
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+    <ion-card padding>
+       
+            <ion-card-title>
+              Hi, my name is Tyler Morrow
+            </ion-card-title>
+        
+           <ion-card-content>
+              <p>I’m a User Experience Designer and Front-end Developer in Atlanta, GA. I tend to wear many hats in the digital world, but my true passion is for creating digital experiences that function organically and provide solutions to problems in new and more effective ways. With a background in psychology, my approach to design and development aims to create products that work as intuitively as possible
+           </p>
+  
+          <!--  <ion-button class="readmore"  color="primary" size="small">
+              <ion-ripple-effect></ion-ripple-effect>
+            <a id="message" ng-href="" onclick="window.open('mailto:tsmorro@gmail.com')">
+            <ion-icon slot="start" icon="mail"></ion-icon>
+              <ion-label>
+                Message Me
+              </ion-label>
+            </a>
+            </ion-button> -->
+            </ion-card-content>
+        
+    </ion-card>
+  </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col>
+      <ion-header padding>
+        <h1 id="headerhome">
+        Featured Work
+        </h1>
+      </ion-header>
+    </ion-col>
+  </ion-row>
+
+            <ion-row  text-wrap>
+                <ion-col size="12" size-md="6" *ngFor="let post of posts$ | async" >
+                        <ion-card button detail lines="inset" (click)="loadPost(post)" padding-bottom  tappable>
+                                <div *ngIf="post.featured_image">
+                                        <img padding-top class="featured-image" [src]="post.featured_image">
+                                    </div>
+                            
+                                    <ion-item>
+                                        <h3 [innerHTML]="post.title.rendered"> </h3>
+                                    </ion-item>
+                            
+                                    <ion-card-content padding>
+                             
+                                       
+                            
+                            
+                                        <div [innerHTML]="post.excerpt.rendered">
+                            
+                                        </div>
+                                        
+                                        <!-- <button (click)="shareTwitter()"><ion-icon name="logo-twitter"></ion-icon></button>
+                                        <button (click)="shareEmail()"><ion-icon name="send"></ion-icon></button>
+                                        <button (click)="shareFacebook()"><ion-icon name="logo-facebook"></ion-icon></button>
+                                        <button (click)="shareWhatsApp()"><ion-icon name="logo-whatsapp"></ion-icon></button>
+                                        <button ion-button small round icon-left outline  mode="ios" color="shareBtn" (click)="share()">
+                                                    <ion-icon name="share"></ion-icon>
+                                                    <b>Share</b>
+                                                </button>        -->           
+         <!--  <ion-card-title [innerHTML]="post.title.rendered"></ion-card-title>
+          <ion-card-content padding>
+          <a href="/{{post.slug}}"><ion-img *ngIf="post._embedded['wp:featuredmedia']" [src]="post._embedded['wp:featuredmedia'][0].source_url" ></ion-img></a>
+          <h3 [innerHTML]="post.excerpt.rendered" text-wrap></h3> -->
+    <ion-button id="readmore" (click)="loadPost(post)"  size="small" slot="end">
+              <ion-ripple-effect></ion-ripple-effect>
+              Read more
+            </ion-button>
+        
         </ion-card-content>
-    </ion-card>-->
+          </ion-card>
+        </ion-col>
+      </ion-row>
+      </ion-grid>
 
-
-    <ion-list  (click)="loadPost(post)" padding-bottom *ngFor="let post of posts$ | async" tappable>
+  <!-- <ion-list  (click)="loadPost(post)" padding-bottom *ngFor="let post of posts$ | async" tappable>
         
         <ion-item lines="none">
             <div *ngIf="post.featured_image">
@@ -65,19 +147,12 @@
         
               <ion-item lines="none">
                   <p no-margin> <small> Published by {{post._embedded.author[0].name }} on  {{post.date }} </small> </p>
-        </ion-item>
+        </ion-item>-->
               
-        <button (click)="shareTwitter()"><ion-icon name="logo-twitter"></ion-icon></button>
-  <button (click)="shareEmail()"><ion-icon name="send"></ion-icon></button>
-  <button (click)="shareFacebook()"><ion-icon name="logo-facebook"></ion-icon></button>
-  <button (click)="shareWhatsApp()"><ion-icon name="logo-whatsapp"></ion-icon></button>
-  <button ion-button small round icon-left outline  mode="ios" color="shareBtn" (click)="share()">
-              <ion-icon name="share"></ion-icon>
-              <b>Share</b>
-          </button>
+      
 <!--                <div [innerHTML]="post.excerpt.rendered">
 
-            </div>-->
-    </ion-list>
+            </div>
+    </ion-list>-->
 
 </ion-content>

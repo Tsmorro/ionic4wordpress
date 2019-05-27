@@ -4,9 +4,15 @@
 /** Ionic CSS Variables **/
 :root {
   /** primary **/
-  --ion-color-primary: #3880ff;
+  --background: #000000;
+  --tylerscolor: #000000;
+  --tylersfont: #ffffff;
+  --tylersback: #555; 
+  --ion-text-color-rgb: #fff;
+  --currentColor: #fff;
+  --ion-color-primary: var(--tylersfont);
   --ion-color-primary-rgb: 56, 128, 255;
-  --ion-color-primary-contrast: #ffffff;
+  --ion-color-primary-contrast: var(--tylerscolor);
   --ion-color-primary-contrast-rgb: 255, 255, 255;
   --ion-color-primary-shade: #3171e0;
   --ion-color-primary-tint: #4c8dff;
@@ -75,12 +81,13 @@
   --ion-color-light-shade: #d7d8da;
   --ion-color-light-tint: #f5f6f9;
   
-   --ion-font-family: 'Roboto';
+   --ion-font-family: 'Noto Sans';
+   --ion-background-color:var(--tylerscolor);
 }
 
 @font-face {
-  font-family: 'Roboto';
+  font-family: 'Noto Sans';
   font-style: normal;
   font-weight: normal;
-  src: url('../assets/font/RobotoSlab-Regular.ttf');
+  src: url('../assets/font/Noto-Sans-Regular.ttf');
 }

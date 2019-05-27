@@ -14,13 +14,17 @@ import { DomSanitizer } from '@angular/platform-browser';
   styleUrls: ["home.page.scss"]
 })
 export class HomePage implements OnInit {
+  
   constructor(
     private postSrvc: PostsService,
     private router: Router,
     private route: ActivatedRoute,
     private sanitizer: DomSanitizer
   ) {}
-
+  theme = {
+    mycolor: '#000',
+    mytextcolor: '#fff'
+  };
   posts$: Observable<any>;
   loadPost(post: any) {
     this.router.navigate(["/posts", post.id]);
@@ -35,4 +39,24 @@ export class HomePage implements OnInit {
       )
     );
   }
+  colorIt() {
+    document.documentElement.style.setProperty(`--tylerscolor`, '#fff');
+    document.documentElement.style.setProperty(`--tylersfont`, '#000');
+    document.documentElement.style.setProperty(`--tylersback`, '#ddd');
+    document.getElementById('logo').setAttribute("src", "http://tmorrow.design/wp-content/uploads/2019/05/tmorrow2.png");
+    document.getElementById('button1').style.setProperty("display", "none");
+    document.getElementById('button2').style.setProperty("display", "inline-block");
+
+  }
+  decolorIt(){
+    document.documentElement.style.setProperty(`--tylerscolor`, '#000');
+    document.documentElement.style.setProperty(`--tylersfont`, '#fff');
+    document.documentElement.style.setProperty(`--tylersback`, '#555');
+    document.getElementById('logo').setAttribute("src","http://tmorrow.design/wp-content/uploads/2019/05/tmorrow.png" );
+    document.getElementById('button2').style.setProperty("display", "none");
+    document.getElementById('button1').style.setProperty("display", "inline-block");
+
+  }
+  
+  
 }

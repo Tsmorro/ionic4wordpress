@@ -1,0 +1,100 @@
+.ionicon{
+    .icon-inner, svg {
+        --color: var(--tylerscolor, #000);
+    }
+}
+
+.toolbar-background{
+    --background: var(--tylerscolor) !important;
+    --color: var(--tylersfont) !important;
+}
+.toolbar-container{
+    --background: var(--tylerscolor) !important;
+    --color: var(--tylersfont) !important;
+}
+.content{
+    font-family:'Noto Sans',sans-serif;
+    font-weight:400;
+    display:flex;
+    flex-wrap:wrap;
+    
+}
+.ionlabel{
+    --color: var(--tylersfont) !important;
+}
+
+.ionicon{
+    --color: var(--tylersfont) !important;
+}
+.ioncontent{
+    --background: var(--tylerscolor) !important;
+}
+#ioncontent, .inner-scroll.scroll-y {
+    --background: var(--tylerscolor) !important;
+}
+#ionitem, #ionitem2{
+    --background: var(--tylerscolor);
+}
+
+#ionlist{
+    --background: var(--tylerscolor, #000) !important;
+    --border: 1px solid var(--tylersback, #555) !important;
+    --color:var(--tylersfont, #fff) !important;
+    padding: 0px;
+}
+#home {
+    color: var(--tylersfont, #fff) !important;
+    stroke: var(--tylersback, #555) !important;
+}
+#letter{
+    color: var(--tylersfont) !important;
+}
+ion-toolbar#iontoolbar {
+    background: var(--tylerscolor) !important;
+}
+ion-title.md.title-md.hydrated {
+    background: var(--tylerscolor);
+}
+img#logo {
+    max-width: 100%;
+    border: 0;
+    padding: 20px;
+}
+
+
+h1{
+    margin-top: 300px;
+    color:var(--tylersfont);
+}
+
+
+
+body > app-root > ion-app > ion-split-pane > ion-router-outlet > app-post-detail > ion-content > div > div > p:nth-child(2) > br:nth-child(4){
+    display:none;
+}
+.elementor-image {
+    /* max-width: 75%; */
+    height: auto;
+    /* display: grid; */
+    align-items: center;
+    justify-content: center;
+}
+.elementor-image:first-child{
+    width: 100%;
+    height: auto;
+}
+ion-title{
+    color:var(--tylersfont);
+}
+img.attachment-full.size-full {
+    max-width: 75%;
+    height: auto;
+}
+span.button-inner.sc-ion-back-button-md {
+    color: var(--tylersfont);
+}
+.elementor-image{
+    img.attachment-large.size-large {
+        height: auto !important;
+    }
+}

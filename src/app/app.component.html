@@ -1,19 +1,27 @@
 <ion-app>
   <ion-split-pane>
     <ion-menu>
-      <ion-header>
+      <ion-header id="ionheader">
         <ion-toolbar>
-          <ion-title><img src="http://tmorrow.design/wp-content/uploads/2019/02/cropped-Logo2.png"></ion-title>
+          <ion-title><img id="logo" src="http://tmorrow.design/wp-content/uploads/2019/05/tmorrow.png"></ion-title>
         </ion-toolbar>
       </ion-header>
-      <ion-content>
-        <ion-list>
+      <ion-content id="ioncontent">
+        <ion-list id="ionlist">
           <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages">
-            <ion-item [routerDirection]="'root'" [routerLink]="[p.url]">
-              <ion-icon slot="start" [name]="p.icon"></ion-icon>
-              <ion-label>
+            <ion-item id="ionitem" [routerDirection]="'root'" [routerLink]="[p.url]">
+              <ion-icon id="home"  slot="start" [name]="p.icon"></ion-icon>
+              <ion-label class="ionlabel">
                 {{p.title}}
               </ion-label>
+            </ion-item>
+            <ion-item id="ionitem2" ng-href="" onclick="window.open('mailto:tsmorro@gmail.com')">
+            
+              <ion-icon id="letter" slot="start" icon="mail" style="--fill:var(--tylersfont, #fff);"></ion-icon>
+                <ion-label class="ionlabel">
+                  Message Me
+                </ion-label>
+             
             </ion-item>
           </ion-menu-toggle>
         </ion-list>
